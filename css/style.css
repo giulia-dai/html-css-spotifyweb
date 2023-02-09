@@ -143,13 +143,27 @@ ul > li{
     display: none;
 }
 
-
 .playlist-main{
     margin-top: 7px;
 }
+
 .bottom-list .label{
     display: none;
     vertical-align: middle;
+}
+
+.btn{
+    background-color: var(--black);
+    border: 3px solid white;
+     padding: 10px 25px;
+    border-radius: 100px;
+}
+
+.btn-cta{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
 }
 
 /* UTILITY */
@@ -182,6 +196,10 @@ ul > li{
     text-align: left;
 }
 
+.right{
+    text-align: right;
+}
+
 .p-5{
    padding: 5px;
 }
@@ -193,6 +211,7 @@ ul > li{
 .white-txt{
     color: white;
 }
+
 
 
 /* DEBUG */
