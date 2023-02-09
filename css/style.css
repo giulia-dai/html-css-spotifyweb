@@ -39,7 +39,7 @@ aside{
 }
 
 .cover-item{
-    padding: 20px;
+    padding: 10px;
     width: 50%;
 }
 
@@ -53,11 +53,9 @@ aside{
 
 .content-nav{
     margin-top: 80px;
+    background-color: var(--primary-color-main);
 }
 
-.cover-container{
-    margin: 20px;
-}
 
 
 .sidebar-top{
@@ -91,7 +89,7 @@ aside{
 }
 
 .nav-main img{
-    height: 35px;  
+    height: 25px;  
     vertical-align: middle;
 }
 
@@ -166,6 +164,38 @@ ul > li{
     padding: 10px;
 }
 
+.list-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item-nav{
+    padding: 5px 10px 20px 0px;
+    font-size: 14px;
+}
+
+#recently-played h2{
+    margin-top: 20px;
+}
+
+.cover , .img-cover{
+    width: 100%;
+}
+
+.title-cover{
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+}
+
+.subtitle-cover{
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
 /* UTILITY */
 
 .flex{
@@ -231,13 +261,11 @@ ul > li{
 }
 
 .debug .content-nav{
-    background-color:aqua;
-    height: 50px;
+    min-height: 80px;
 }
 
 .debug .cover-container{
-  height: 200px;
-  background-color: aliceblue;
+  background-color: rgb(61, 98, 131);
 }
 
 .debug .cover-list{
@@ -299,10 +327,13 @@ ul > li{
 
     .logo{
         text-align: left;
+        padding-left: 15px;
+        padding-top: 5px;
+
     }
 
     .logo .img-logo{
-        width: 30%;
+        width: 20%;
     }
 
     .logo .label{
@@ -314,7 +345,7 @@ ul > li{
 
     }
     .logo-txt{
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 700;
         color: white;
     }
@@ -374,13 +405,18 @@ ul > li{
         display: block;
     }
 
+    .cover-item{
+        width: calc(100% / 2);
+
+    }
+
 
 }
 
 @media screen and (min-width: 768px) {
 
     .cover-item{
-        width: 25%
+        width: calc(100% / 4);
     }
     
 }
@@ -388,7 +424,7 @@ ul > li{
 @media screen and (min-width: 992px) {
 
     .cover-item{
-        width: calc(100% / 6)
+        width: calc(100% / 6) ;
     }
     
 }
