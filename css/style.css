@@ -16,6 +16,14 @@ html{
     font-family: 'Open Sans', sans-serif;
 }
 
+.content{
+    background-color: var(--primary-color-main);
+}
+
+aside{
+    background-color: var(--black);
+}
+
 footer{
     height: 100px;
 }
@@ -47,7 +55,7 @@ aside{
     position: fixed;
     top: 0;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--cta-color);
     width: calc(100% - 50px);
 }
 
@@ -196,6 +204,18 @@ ul > li{
     padding-top: 5px;
 }
 
+#created-for h2{
+    margin-top: 15px;
+}
+
+#popular h2{
+    margin-top: 15px;
+}
+
+#popular .cover-item:last-child{
+    margin-bottom: 30px;
+}
+
 /* UTILITY */
 
 .flex{
@@ -242,43 +262,18 @@ ul > li{
     color: white;
 }
 
-
-
-/* DEBUG */
-
-.debug .content{
-    background-color: pink;
+.f-weight{
+    font-weight: 800;
 }
-
-.debug main{
-    background-color: black;
-
-}
-
-
-.debug footer{
-    background-color: grey;
-}
-
-.debug .content-nav{
-    min-height: 80px;
-}
-
-.debug .cover-container{
-  background-color: rgb(61, 98, 131);
-}
-
-.debug .cover-list{
-    border: dashed 2px black;
-}
-
-.img-sidebar{
-    background-color: black;
-}
-
 
 .deco-none{
     text-decoration: none;
+}
+
+/* DEBUG */
+
+.debug footer{
+    background-color: grey;
 }
 
 /* RESPONSIVE */
@@ -326,6 +321,7 @@ ul > li{
     }
 
     .logo{
+        background-color: var(--black);
         text-align: left;
         padding-left: 15px;
         padding-top: 5px;
