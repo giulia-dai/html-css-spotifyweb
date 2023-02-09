@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root{
+    --grey: #6D6D6D;
+    --black: #000;
+    --primary-color-main:#141922;
+    --primary-color-footer: #282828;
+    --cta-color:#090B13;
+}
+
 html{
     font-family: 'Open Sans', sans-serif;
 }
@@ -14,6 +22,7 @@ footer{
 
 main{
     height: calc(100vh - 100px);
+    overflow-y: hidden;
 }
 
 aside{
@@ -50,12 +59,98 @@ aside{
     margin: 20px;
 }
 
-.sidebar .img-sidebar{
+
+.sidebar-top{
+    height: calc(100% - 100px);
+    overflow-y: hidden;
+    color: var(--black);
+}
+
+.sidebar-bottom{
+    height: 100px;
+    padding: 5px;
+    
+}
+
+.sidebar{
+    min-height: 400px;
+}
+
+.sidebar .playlist-main ul{
+    overflow: scroll;
+
+}
+
+.sidebar .sidebar-top{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-main{
     margin-top: 1rem;
 }
 
+.nav-main img{
+    height: 35px;  
+    vertical-align: middle;
+}
+
+.nav-main a{
+    display: inline-block;
+  
+}
+
+.nav-main .label{
+    display: none;
+}
+
+.logo .label{
+    display: none;
+}
+
+.sidebar .playlist-main{
+    display: none;
+}
+
+.sidebar-top .logo{
+    width: 100%;
+}
+
+.logo img{
+    width: 90%;
+    padding: 3px;
+}
+
+ul > li{
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.img-download{
+    width: 50%;
+    margin-top: 10px;
+}
+
+.img-user{
+    width: 80%;
+    margin-top: 5px;
+    object-fit: cover;
+    border-radius: 100%;
+    background-color: var(--grey);
+}
+
+.special-hr{
+    display: none;
+}
 
 
+.playlist-main{
+    margin-top: 7px;
+}
+.bottom-list .label{
+    display: none;
+    vertical-align: middle;
+}
 
 /* UTILITY */
 
@@ -67,6 +162,14 @@ aside{
     flex-wrap: wrap;
 }
 
+.w-100{
+    width: 100%;
+}
+
+.w-90{
+    width: 90%;
+}
+
 .overflow-scroll{
     overflow-y: scroll;
 }
@@ -75,30 +178,24 @@ aside{
     text-align: center;
 }
 
+.left{
+    text-align: left;
+}
+
 .p-5{
    padding: 5px;
 }
 
-
-.logo-img{
-    margin-top: 5px;
+.grey-txt{
+    color: var(--grey);
 }
 
-.logo-img > img{
-    width: 70%;
+.white-txt{
+    color: white;
 }
-
-.img-sidebar > img{
-    width: 70%;
-}
-
 
 
 /* DEBUG */
-
-.debug .sidebar{
-    background-color: yellow;
-}
 
 .debug .content{
     background-color: pink;
@@ -132,12 +229,9 @@ aside{
     background-color: black;
 }
 
-.logo-img{
-    background-color: darkblue;
-}
 
-.img-sidebar-bottom{
-    background-color: aquamarine;
+.deco-none{
+    text-decoration: none;
 }
 
 /* RESPONSIVE */
@@ -156,6 +250,112 @@ aside{
         width: calc(100% - 200px);
         left: 200px;
     }
+
+    .sidebar .playlist-main{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar .playlist-main{
+        overflow-y: hidden;
+    
+    }
+    
+    .sidebar .playlist-main{
+        overflow: hidden;
+    
+    }
+    
+    .sidebar .sidebar-top{
+        overflow: hidden;
+    }
+    
+    .sidebar .playlist-main ul{
+        overflow: scroll;
+    
+    }
+    .nav-main .label{
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .logo{
+        text-align: left;
+    }
+
+    .logo .img-logo{
+        width: 30%;
+    }
+
+    .logo .label{
+        vertical-align: middle;
+        display: inline;
+    }
+    .logo .img-logo{
+        vertical-align: middle;
+
+    }
+    .logo-txt{
+        font-size: 30px;
+        font-weight: 700;
+        color: white;
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 15px;
+    }
+
+    .playlist-main{
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .playlist-main h3{
+        color: white;
+        padding-bottom: 5px;
+        vertical-align: middle;
+    }
+
+    .fa-plus{
+        font-size: 20px;
+        background-color: lightgrey;
+        color: black;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    ul .bottom-list{
+        display: inline;
+        list-style: none;
+    }
+
+    .img-download{
+        width: 10%;
+        margin-top: 5px;
+        vertical-align: middle;
+    }
+    
+    .img-user{
+        width: 20%;
+        margin-top: 5px;
+        object-fit: cover;
+        border-radius: 100%;
+        background-color: var(--grey);
+        vertical-align: middle;
+    }
+
+    .bottom-list .label{
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .special-hr{
+        display: block;
+    }
+
+
 }
 
 @media screen and (min-width: 768px) {
