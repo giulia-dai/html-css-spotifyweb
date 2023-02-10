@@ -60,6 +60,7 @@ aside{
 #cta{
     position: fixed;
     top: 0;
+    z-index: 999;
     height: 70px;
     background-color: var(--cta-color);
     width: calc(100% - 50px);
@@ -174,17 +175,20 @@ ul > li{
 }
 
 .btn{
-    background-color: var(--black);
-    border: 3px solid white;
-     padding: 10px 25px;
+    border: 1px solid white;
+    padding: 5px 10px;
     border-radius: 100px;
 }
 
 .btn-cta{
     display: flex;
     justify-content: right;
-    align-items: center;
-    padding: 10px;
+    padding-top: 15px;
+}
+
+.upgrade{
+    font-size: 13px;
+    padding: 5px 20px;
 }
 
 .list-nav{
@@ -207,10 +211,13 @@ ul > li{
 }
 
 .cover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  position: relative;
+}
+
+.play{
+    position: absolute;
+    top: 30%;
+    left: 40%;
 }
 
 .title-cover{
@@ -252,7 +259,7 @@ ul > li{
     font-size: 15px;
     padding: 0 5px;    
     vertical-align: middle;
-    color:#848484;
+    color:white;
 }
 
 #player .player-control{
@@ -271,11 +278,11 @@ ul > li{
     width: 20%;
 }
 
-#player .player-album-icons{
+#player .player-album-icons a{
     width: 20%;
     color:#848484;
-
-
+    display: block;
+    padding-right: 10px;
 }
 
 #player .player-album-title{
@@ -360,9 +367,9 @@ ul > li{
     font-size: 50px;
 }
 
-/* .cover > .play{
+.cover > .play{
     display: none;
-} */
+}
 
 /* HOVER */
 
@@ -398,13 +405,22 @@ color: white
     display: inline;
 }
 
-
 .list-nav > .item-nav:hover a{
     color: white;
 }
 
+.player-album-title:hover  > h3{
+    text-decoration: underline;
+    color: white;
+}
 
+.player-album-icons:hover  .fa-heart{
+    color: white;
+}
 
+.player-album-icons:hover .fa-folder{
+    color: white;
+}
 /* UTILITY */
 
 .flex{
@@ -470,13 +486,6 @@ color: white
 .deco-none{
     text-decoration: none;
 }
-
-
-
-/* DEBUG */
-
-
-
 
 /* RESPONSIVE */
 
@@ -609,6 +618,11 @@ color: white
 
     }
 
+    #player .player-album-icons a{
+        display: inline;
+        padding-right: 5px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -620,6 +634,10 @@ color: white
         margin: 0px 10px ;
     }
 
+    .play{
+        top: 25%;
+        left: 35%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -627,6 +645,5 @@ color: white
     .cover-item{
         width: calc(100% / 6) ;
     }
-
 }
 
