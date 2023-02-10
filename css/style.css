@@ -12,6 +12,10 @@
     --cta-color:#090B13;
 }
 
+.body{
+    min-width: 550px;
+}
+
 html{
     font-family: 'Open Sans', sans-serif;
 }
@@ -26,6 +30,8 @@ aside{
 
 footer{
     height: 100px;
+    padding: 0 10px;
+    background-color: var(--primary-color-footer);
 }
 
 main{
@@ -132,6 +138,20 @@ ul > li{
     padding-bottom: 5px;
 }
 
+.unordered-playlist > li{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.playlist-main > a{
+    font-weight: 700;
+    font-size: 11;
+}
+
+
+
+
 .img-download{
     width: 50%;
     margin-top: 10px;
@@ -216,6 +236,159 @@ ul > li{
     margin-bottom: 30px;
 }
 
+
+#player .player-album{
+    width: 190px;
+    
+}
+
+#player .player-audio{
+    width: 190px;
+}
+
+#player .player-audio i{
+    font-size: 15px;
+    padding: 0 5px;    
+    vertical-align: middle;
+    color:#848484;
+}
+
+#player .player-control{
+    width: 40%;
+}
+
+#player{
+    height: 100%;
+}
+
+#player .player-album-cover img{
+    width: 100%;
+}
+
+#player .player-album-cover{
+    width: 20%;
+}
+
+#player .player-album-icons{
+    width: 20%;
+    color:#848484;
+
+
+}
+
+#player .player-album-title{
+    width: 50%;
+}
+
+.player-album-title > h2{
+    color: #D9D9D9;
+    font-size: 12px;
+}
+
+.player-album-title > h3{
+    color: #858585;
+    font-size: 10px;
+}
+
+#player .player-control-buttons{
+    height: 60%;
+}
+
+#player .player-control-buttons i{
+    color: #848484;
+}
+
+#player .player-control i{
+    font-size: 25px;
+    margin: 0px 10px ;
+}
+
+#player .slider{
+    height: 10px;
+    background-color: #696969;
+    border-radius: 5px;
+}
+
+.slider .percent{
+  width: 20%;
+  height: 100%;
+  background-color:#C8C8C8;
+  border-radius: 5px;
+  position: relative;
+
+}
+
+#player .player-control-elapsed , #player .player-control-total{
+    width: 10%;
+    color: white;
+}
+
+
+
+#player .player-control-progress{
+    width: 80%;
+}
+
+.slider .current{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: -3px;
+    display: none;
+}
+
+
+#player .player-audio-percent{
+  width: 60%;
+}
+
+#player .player-audio{
+    font-size: 20px;
+
+}
+
+.player-control-time{
+    gap: 5px;
+}
+
+
+/* HOVER */
+
+.nav-list > li:hover .label{
+    color: white;
+}
+
+.playlist-main > a:hover {
+color: white
+}
+
+.unordered-playlist > li:hover a{
+    color: white;
+}
+
+.bottom-list > li:hover .label{
+    color: white;
+}
+
+.slider:hover .current{
+    display: block;
+}
+
+.slider:hover .percent{
+    background-color: greenyellow;
+}
+
+ .cover > .img-cover:hover{
+    opacity: 0.5;
+}
+
+.list-nav > .item-nav:hover a{
+    color: white;
+}
+
 /* UTILITY */
 
 .flex{
@@ -224,6 +397,18 @@ ul > li{
 
 .wrap{
     flex-wrap: wrap;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
 }
 
 .w-100{
@@ -270,11 +455,12 @@ ul > li{
     text-decoration: none;
 }
 
+
+
 /* DEBUG */
 
-.debug footer{
-    background-color: grey;
-}
+
+
 
 /* RESPONSIVE */
 
@@ -370,6 +556,7 @@ ul > li{
         color: black;
         vertical-align: middle;
         padding: 10px;
+        
     }
 
     ul .bottom-list{

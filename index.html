@@ -32,7 +32,7 @@
                    <li>
                       <a class="deco-none" href="#"> 
                          <img src="img/home.svg" alt="home"> 
-                         <span class="label grey-txt">Home</span>
+                         <span class="label white-txt">Home</span>
                       </a>
                    </li>
 
@@ -56,7 +56,7 @@
                   <h3>PLAYLIST</h3>
                   <a class="deco-none grey-txt" href="#" class="add-playlist"> <i class="fa-solid fa-plus"></i> Crea playlist</a>
 
-                 <ul class="p-5">
+                 <ul class="p-5 unordered-playlist">
 
                    <li>
                      <a href="#" class="deco-none grey-txt">Nome Playlist</a>
@@ -280,6 +280,72 @@
 
     <footer>
 
+      <section id="player" class="flex space-between">
+
+        <div class="player-album flex space-between align-center ">
+
+           <div class="player-album-cover">
+            <img src="img/sinister.jpeg" alt="cover album">
+           </div>
+
+           <div class="player-album-title"> 
+               <h2>Sinister</h2>
+               <h3>Brano Nome</h3>
+           </div>
+
+           <div  class="player-album-icons">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-folder"></i>
+           </div>
+
+        </div>
+
+        <div class="player-control">
+
+         <div class=" player-control-buttons flex align-center justify-center">
+
+            <div class="icons-control">
+               <a href="#"><i class="fa-solid fa-shuffle"></i></a>
+               <a href="#"><i class="fa-solid fa-backward-step"></i></a>
+               <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+               <a href="#"><i class="fa-solid fa-forward-step"></i></a> 
+               <a href="#"><i class="fa-solid fa-rotate-right"></i></a> 
+           </div>
+         </div>
+
+         <div class="player-control-time flex align-center">
+
+          <div class="player-control-elapsed center"> -0:25</div>
+
+
+          <div class="player-control-progress">
+            <div class="slider">
+               <div class="percent">
+                  <div class="current"></div>
+               </div>
+            </div>
+          </div>
+
+           <div class="player-control-total center"> -4:35</div>
+        </div>
+       </div>
+
+        <div class="player-audio flex align-center">
+
+         <a href="#"><i class="fa-solid fa-list-ul"></i></a>
+         <a href="#"><i class="fa-solid fa-desktop"></i></a>
+         <a href="#"><i class="fa-solid fa-volume-high"></i></a>
+
+         <div class="player-audio-percent">
+
+            <div class="slider">
+               <div class="percent">
+                  <div class="current"></div>
+               </div>
+            </div>
+         </div>
+        </div>
+      </section>
     </footer>
     
 </body>
